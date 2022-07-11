@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tour appversion="6.1.15" apprev="18116" start="node1">
+  <panorama id="node1">
+    <input levelbiashidpi="1.000" leveltilesize="232" levelingpitch="0" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1856" height="1856" overlap="1" levelbias="0.400" levelingroll="0">
+      <level width="1856" height="1856" predecode="0" preload="0"/>
+      <level width="928" height="928" predecode="0" preload="0"/>
+      <level width="464" height="464" predecode="0" preload="0"/>
+      <level width="232" height="232" predecode="1" preload="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="3" pannorth="-231">
+      <start fov="86.0671" projection="4" pan="0" tilt="0"/>
+      <flyin fov="170" projection="9" pan="0" tilt="-90"/>
+      <min pan="0" tilt="-90" fovpixel="2"/>
+      <max fovstereographic="270" fov="120" scaletofit="1" pan="360" fovfisheye="360" tilt="90"/>
+    </view>
+    <userdata description="" customnodeid="" info="" longitude="-118.24915946" nodeid="node1" author="" title="Northwest Entrance Plaza" comment="" heading="-231" source="" copyright="" tags="sent" latitude="34.05500167" datetime="6/26/2020 11:58 AM"/>
+    <hotspots wordwrap="1" width="180" height="20">
+      <label background="1" enabled="1" border="1" textalpha="1" wordwrap="1" width="180" borderradius="1" height="20" bordercolor="0x000000" textcolor="0x000000" backgroundcolor="0xffffff" backgroundalpha="1" borderalpha="1"/>
+      <polystyle handcursor="1" bordercolor="0x0000ff" backgroundcolor="0x0000ff" backgroundalpha="0.25098" mode="0" borderalpha="1"/>
+      <hotspot description="" title="Grand Bar Overhang" distance="31.891" skinid="ht_node" target="24.9/0.3/70.0" id="Point01" url="{node3}" pan="-9.32" tilt="-0.63"/>
+      <hotspot description="" title="Retail Shops Level 1" distance="42.0924" skinid="ht_node" target="$fwd" id="Point02" url="{node5}" pan="-388.291" tilt="0"/>
+      <hotspot description="" title="Retail Shops Level 2" distance="47.8556" skinid="ht_node" target="$fwd" id="Point03" url="{node6}" pan="-25" tilt="4.9"/>
+      <hotspot description="" title="Grand Bar Terrace" distance="38.2065" skinid="ht_node" target="$fwd" id="Point04" url="{node7}" pan="-5" tilt="9"/>
+      <hotspot description="" title="Mercato Seating" distance="59.2251" skinid="ht_node" target="$fwd" id="Point05" url="{node2}" pan="-338.02" tilt="7"/>
+    </hotspots>
+    <media/>
+    <transition zoomafterinfov="90" enabled="1" zoomout="0" zoomafteroutfov="20" softedge="0" zoomfov="20" zoomoutpause="1" zoomin="0" blendcolor="0x000000" type="crossdissolve" blendtime="1" zoomspeed="2"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control lockedkeyboard="0" lockedmouse="0" invertwheel="0" hideabout="0" rubberband="0" sensitivity="10" invertcontrol="1" contextprojections="0" contextfullscreen="1" lockedkeyboardzoom="0" speedwheel="1" simulatemass="1" lockedwheel="0" dblclickfullscreen="0" contextvr="1"/>
+  </panorama>
+  <panorama id="node3">
+    <input levelbiashidpi="1.000" leveltilesize="232" levelingpitch="0" leveltileurl="tiles/node3/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1856" height="1856" overlap="1" levelbias="0.400" levelingroll="0">
+      <level width="1856" height="1856" predecode="0" preload="0"/>
+      <level width="928" height="928" predecode="0" preload="0"/>
+      <level width="464" height="464" predecode="0" preload="0"/>
+      <level width="232" height="232" predecode="1" preload="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="3" pannorth="133">
+      <start fov="86.0671" projection="4" pan="0" tilt="0"/>
+      <flyin fov="170" projection="9" pan="0" tilt="-90"/>
+      <min pan="0" tilt="-90" fovpixel="2"/>
+      <max fovstereographic="270" fov="120" scaletofit="1" pan="360" fovfisheye="360" tilt="90"/>
+    </view>
+    <userdata description="" customnodeid="" info="" longitude="-118.24906826" nodeid="node3" author="" title="Grand Bar Overhang" comment="" heading="133" source="" copyright="" tags="sent" latitude="34.05472500" datetime="6/18/2020 10:05 AM"/>
+    <hotspots wordwrap="1" width="180" height="20">
+      <label background="1" enabled="1" border="1" textalpha="1" wordwrap="1" width="180" borderradius="1" height="20" bordercolor="0x000000" textcolor="0x000000" backgroundcolor="0xffffff" backgroundalpha="1" borderalpha="1"/>
+      <polystyle handcursor="1" bordercolor="0x0000ff" backgroundcolor="0x0000ff" backgroundalpha="0.25098" mode="0" borderalpha="1"/>
+      <hotspot description="" title="" distance="11.2533" skinid="ht_node" target="0.1/-1.1/70.0" id="Retail Shops Level 1" url="{node5}" pan="-17.36" tilt="-4.53"/>
+      <hotspot description="" title="Northwest Entrance Plaza" distance="31.891" skinid="ht_node" target="$fwd" id="Point01" url="{node1}" pan="148.275" tilt="0"/>
+      <hotspot description="" title="Retail Shops Level 2" distance="17.1729" skinid="ht_node" target="$fwd" id="Point02" url="{node6}" pan="-20" tilt="10"/>
+      <hotspot description="" title="Grand Bar Terrace" distance="13.7844" skinid="ht_node" target="$fwd" id="Point03" url="{node7}" pan="28" tilt="26"/>
+      <hotspot description="" title="Mercato Seating" skinid="ht_node" target="$fwd" id="Point04" url="{node2}" pan="47.97" tilt="8"/>
+    </hotspots>
+    <media/>
+    <transition zoomafterinfov="90" enabled="1" zoomout="0" zoomafteroutfov="20" softedge="0" zoomfov="20" zoomoutpause="1" zoomin="0" blendcolor="0x000000" type="crossdissolve" blendtime="1" zoomspeed="2"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control lockedkeyboard="0" lockedmouse="0" invertwheel="0" hideabout="0" rubberband="0" sensitivity="10" invertcontrol="1" contextprojections="0" contextfullscreen="1" lockedkeyboardzoom="0" speedwheel="1" simulatemass="1" lockedwheel="0" dblclickfullscreen="0" contextvr="1"/>
+  </panorama>
+  <panorama id="node5">
+    <input levelbiashidpi="1.000" leveltilesize="232" levelingpitch="0" leveltileurl="tiles/node5/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1856" height="1856" overlap="1" levelbias="0.400" levelingroll="0">
+      <level width="1856" height="1856" predecode="0" preload="0"/>
+      <level width="928" height="928" predecode="0" preload="0"/>
+      <level width="464" height="464" predecode="0" preload="0"/>
+      <level width="232" height="232" predecode="1" preload="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="3" pannorth="-122">
+      <start fov="86.0671" projection="4" pan="0" tilt="0"/>
+      <flyin fov="170" projection="9" pan="0" tilt="-90"/>
+      <min pan="0" tilt="-90" fovpixel="2"/>
+      <max fovstereographic="270" fov="120" scaletofit="1" pan="360" fovfisheye="360" tilt="90"/>
+    </view>
+    <userdata description="" customnodeid="" info="" longitude="-118.24898307" nodeid="node5" author="" title="Retail Shops Level 1" comment="" heading="-122" source="" copyright="" tags="sent" latitude="34.05465247" datetime="7/8/2020 1:52 PM"/>
+    <hotspots wordwrap="1" width="180" height="20">
+      <label background="1" enabled="1" border="1" textalpha="1" wordwrap="1" width="180" borderradius="1" height="20" bordercolor="0x000000" textcolor="0x000000" backgroundcolor="0xffffff" backgroundalpha="1" borderalpha="1"/>
+      <polystyle handcursor="1" bordercolor="0x0000ff" backgroundcolor="0x0000ff" backgroundalpha="0.25098" mode="0" borderalpha="1"/>
+      <hotspot description="" title="" distance="5.9438" skinid="ht_node" target="163.4/-0.3/70.0" id="Retail Shops Level 2" url="{node6}" pan="-17.46" tilt="22.02"/>
+      <hotspot description="" title="Northwest Entrance Plaza" distance="42.0924" skinid="ht_node" target="$fwd" id="Point01" url="{node1}" pan="151.44" tilt="-0.52"/>
+      <hotspot description="" title="Grand Bar Overhang" distance="11.2533" skinid="ht_node" target="$fwd" id="Point02" url="{node3}" pan="-197.261" tilt="-2.99"/>
+      <hotspot description="" title="Grand Bar Terrace" distance="9.73693" skinid="ht_node" target="$fwd" id="Point03" url="{node7}" pan="126.48" tilt="28.15"/>
+      <hotspot description="" title="Mercato Seating" skinid="ht_node" target="$fwd" id="Point04" url="{node2}" pan="-292.546" tilt="10.52"/>
+    </hotspots>
+    <media/>
+    <transition zoomafterinfov="90" enabled="1" zoomout="0" zoomafteroutfov="20" softedge="0" zoomfov="20" zoomoutpause="1" zoomin="0" blendcolor="0x000000" type="crossdissolve" blendtime="1" zoomspeed="2"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control lockedkeyboard="0" lockedmouse="0" invertwheel="0" hideabout="0" rubberband="0" sensitivity="10" invertcontrol="1" contextprojections="0" contextfullscreen="1" lockedkeyboardzoom="0" speedwheel="1" simulatemass="1" lockedwheel="0" dblclickfullscreen="0" contextvr="1"/>
+  </panorama>
+  <panorama id="node6">
+    <input levelbiashidpi="1.000" leveltilesize="232" levelingpitch="0" leveltileurl="tiles/node6/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1856" height="1856" overlap="1" levelbias="0.400" levelingroll="0">
+      <level width="1856" height="1856" predecode="0" preload="0"/>
+      <level width="928" height="928" predecode="0" preload="0"/>
+      <level width="464" height="464" predecode="0" preload="0"/>
+      <level width="232" height="232" predecode="1" preload="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="3" pannorth="-168">
+      <start fov="86.0671" projection="4" pan="0" tilt="0"/>
+      <flyin fov="170" projection="9" pan="0" tilt="-90"/>
+      <min pan="0" tilt="-90" fovpixel="2"/>
+      <max fovstereographic="270" fov="120" scaletofit="1" pan="360" fovfisheye="360" tilt="90"/>
+    </view>
+    <userdata description="" customnodeid="" info="" longitude="-118.24894350" nodeid="node6" author="" title="Retail Shops Level 2" comment="" heading="-168" source="" copyright="" tags="sent" latitude="34.05461025" datetime="7/15/2020 4:47 PM"/>
+    <hotspots wordwrap="1" width="180" height="20">
+      <label background="1" enabled="1" border="1" textalpha="1" wordwrap="1" width="180" borderradius="1" height="20" bordercolor="0x000000" textcolor="0x000000" backgroundcolor="0xffffff" backgroundalpha="1" borderalpha="1"/>
+      <polystyle handcursor="1" bordercolor="0x0000ff" backgroundcolor="0x0000ff" backgroundalpha="0.25098" mode="0" borderalpha="1"/>
+      <hotspot description="" title="" distance="12.6248" skinid="ht_node" target="142.5/-0.7/70.0" id="Grand Bar Terrace" url="{node7}" pan="-133.4" tilt="-2.6"/>
+      <hotspot description="" title="Northwest Entrance Plaza" distance="47.8556" skinid="ht_node" target="$fwd" id="Point01" url="{node1}" pan="-111.484" tilt="-8.25"/>
+      <hotspot description="" title="Grand Bar Overhang" distance="17.1729" skinid="ht_node" target="$fwd" id="Point02" url="{node3}" pan="-111.848" tilt="-17.61"/>
+      <hotspot description="" title="Retail Shops Level 1" skinid="ht_node" target="$fwd" id="Point03" url="{node5}" pan="-116.491" tilt="-38.81"/>
+      <hotspot description="" title="Mercato Seating" distance="36.8269" skinid="ht_node" target="$fwd" id="Point04" url="{node2}" pan="-187.278" tilt="-1.21"/>
+    </hotspots>
+    <media/>
+    <transition zoomafterinfov="90" enabled="1" zoomout="0" zoomafteroutfov="20" softedge="0" zoomfov="20" zoomoutpause="1" zoomin="0" blendcolor="0x000000" type="crossdissolve" blendtime="1" zoomspeed="2"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control lockedkeyboard="0" lockedmouse="0" invertwheel="0" hideabout="0" rubberband="0" sensitivity="10" invertcontrol="1" contextprojections="0" contextfullscreen="1" lockedkeyboardzoom="0" speedwheel="1" simulatemass="1" lockedwheel="0" dblclickfullscreen="0" contextvr="1"/>
+  </panorama>
+  <panorama id="node7">
+    <input levelbiashidpi="1.000" leveltilesize="232" levelingpitch="0" leveltileurl="tiles/node7/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1856" height="1856" overlap="1" levelbias="0.400" levelingroll="0">
+      <level width="1856" height="1856" predecode="0" preload="0"/>
+      <level width="928" height="928" predecode="0" preload="0"/>
+      <level width="464" height="464" predecode="0" preload="0"/>
+      <level width="232" height="232" predecode="1" preload="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="3" pannorth="-4">
+      <start fov="86.0671" projection="4" pan="0" tilt="0"/>
+      <flyin fov="170" projection="9" pan="0" tilt="-90"/>
+      <min pan="0" tilt="-90" fovpixel="2"/>
+      <max fovstereographic="270" fov="120" scaletofit="1" pan="360" fovfisheye="360" tilt="90"/>
+    </view>
+    <userdata description="" customnodeid="" info="" longitude="-118.24891868" nodeid="node7" author="" title="Grand Bar Terrace" comment="" heading="-4" source="" copyright="" tags="sent" latitude="34.05472191" datetime="6/29/2020 10:10 AM"/>
+    <hotspots wordwrap="1" width="180" height="20">
+      <label background="1" enabled="1" border="1" textalpha="1" wordwrap="1" width="180" borderradius="1" height="20" bordercolor="0x000000" textcolor="0x000000" backgroundcolor="0xffffff" backgroundalpha="1" borderalpha="1"/>
+      <polystyle handcursor="1" bordercolor="0x0000ff" backgroundcolor="0x0000ff" backgroundalpha="0.25098" mode="0" borderalpha="1"/>
+      <hotspot description="" title="" skinid="ht_node" target="0.0/0.0/70.0" id="Mercato Seating" url="{node2}" pan="-219.09" tilt="-1.35"/>
+      <hotspot description="" title="Northwest Entrance Plaza" skinid="ht_node" target="$fwd" id="Point01" url="{node1}" pan="259.431" tilt="-8.83"/>
+      <hotspot description="" title="Grand Bar Overhang" distance="13.7844" skinid="ht_node" target="$fwd" id="Point02" url="{node3}" pan="285.662" tilt="-25.92"/>
+      <hotspot description="" title="Retail Shops Level 1" skinid="ht_node" target="$fwd" id="Point03" url="{node5}" pan="4.81669" tilt="-29.51"/>
+      <hotspot description="" title="Retail Shops Level 2" distance="12.6248" skinid="ht_node" target="$fwd" id="Point04" url="{node6}" pan="45.8152" tilt="-1.36"/>
+    </hotspots>
+    <media/>
+    <transition zoomafterinfov="90" enabled="1" zoomout="0" zoomafteroutfov="20" softedge="0" zoomfov="20" zoomoutpause="1" zoomin="0" blendcolor="0x000000" type="crossdissolve" blendtime="1" zoomspeed="2"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control lockedkeyboard="0" lockedmouse="0" invertwheel="0" hideabout="0" rubberband="0" sensitivity="10" invertcontrol="1" contextprojections="0" contextfullscreen="1" lockedkeyboardzoom="0" speedwheel="1" simulatemass="1" lockedwheel="0" dblclickfullscreen="0" contextvr="1"/>
+  </panorama>
+  <panorama id="node2">
+    <input levelbiashidpi="1.000" leveltilesize="232" levelingpitch="0" leveltileurl="tiles/node2/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1856" height="1856" overlap="1" levelbias="0.400" levelingroll="0">
+      <level width="1856" height="1856" predecode="0" preload="0"/>
+      <level width="928" height="928" predecode="0" preload="0"/>
+      <level width="464" height="464" predecode="0" preload="0"/>
+      <level width="232" height="232" predecode="1" preload="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="3" pannorth="-15">
+      <start fov="86.0671" projection="4" pan="0" tilt="0"/>
+      <flyin fov="170" projection="9" pan="0" tilt="-90"/>
+      <min pan="0" tilt="-90" fovpixel="2"/>
+      <max fovstereographic="270" fov="120" scaletofit="1" pan="360" fovfisheye="360" tilt="90"/>
+    </view>
+    <userdata description="" customnodeid="" info="" longitude="-118.24858676" nodeid="node2" author="" title="Mercato Seating" comment="" heading="-15" source="" copyright="" tags="sent" latitude="34.05475969" datetime="7/13/2020 11:32 AM"/>
+    <hotspots wordwrap="1" width="180" height="20">
+      <label background="1" enabled="1" border="1" textalpha="1" wordwrap="1" width="180" borderradius="1" height="20" bordercolor="0x000000" textcolor="0x000000" backgroundcolor="0xffffff" backgroundalpha="1" borderalpha="1"/>
+      <polystyle handcursor="1" bordercolor="0x0000ff" backgroundcolor="0x0000ff" backgroundalpha="0.25098" mode="0" borderalpha="1"/>
+      <hotspot description="" title="" distance="59.2251" skinid="ht_node" target="0.0/0.0/70.0" id="Northwest Entrance Plaza" url="{node1}" pan="-250.36" tilt="-7.33"/>
+      <hotspot description="" title="Grand Bar Overhang" distance="44.5257" skinid="ht_node" target="$fwd" id="Point01" url="{node3}" pan="127.81" tilt="-10.33"/>
+      <hotspot description="" title="Retail Shops Level 1" distance="38.4075" skinid="ht_node" target="$fwd" id="Point02" url="{node5}" pan="155.484" tilt="-11.03"/>
+      <hotspot description="" title="Retail Shops Level 2" distance="36.8269" skinid="ht_node" target="$fwd" id="Point03" url="{node6}" pan="173.762" tilt="-1.64"/>
+      <hotspot description="" title="Grand Bar Terrace" distance="30.8655" skinid="ht_node" target="$fwd" id="Point04" url="{node7}" pan="135.872" tilt="-2.49"/>
+    </hotspots>
+    <media/>
+    <transition zoomafterinfov="90" enabled="1" zoomout="0" zoomafteroutfov="20" softedge="0" zoomfov="20" zoomoutpause="1" zoomin="0" blendcolor="0x000000" type="crossdissolve" blendtime="1" zoomspeed="2"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control lockedkeyboard="0" lockedmouse="0" invertwheel="0" hideabout="0" rubberband="0" sensitivity="10" invertcontrol="1" contextprojections="0" contextfullscreen="1" lockedkeyboardzoom="0" speedwheel="1" simulatemass="1" lockedwheel="0" dblclickfullscreen="0" contextvr="1"/>
+  </panorama>
+  <masternode>
+    <userdata description="" customnodeid="" info="" longitude="" nodeid="master" author="" title="" comment="" heading="0" source="" copyright="" tags="" latitude="" datetime=""/>
+  </masternode>
+  <map mapprovider="openstreetmap" title="" mapstyle="streets" mapmaxzoom="18" id="Map01" mapurltemplate="http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" type="web"/>
+</tour>
