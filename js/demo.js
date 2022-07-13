@@ -14,12 +14,12 @@ window.addEventListener('load', function () {
 		showInstructions(true);
 	})
 
-	const inquireButton = document.getElementById('inquire-button')
-
-	inquireButton.addEventListener('click', function (e) {
-		e.preventDefault();
-		
-	})
+	// const inquireButton = document.getElementById('inquire-button')
+	//
+	// inquireButton.addEventListener('click', function (e) {
+	// 	e.preventDefault();
+	//
+	// })
 })
 
 const messageHandler = (event) => {

@@ -96,6 +96,7 @@ body {
 body.playing #header {
 	transform: translateY(0);
 	opacity: 1;
+	z-index: 5;
 }
 
 #header #header-logo {
@@ -135,6 +136,46 @@ body.playing #header {
 	color: #573F33;
 	border: 2px solid #573F33;
 	background-color: transparent;
+}
+
+.modal {
+	text-align: center;
+}
+
+.modal .modal-header, .modal .modal-footer {
+	position: relative;
+	border: none;
+}
+
+.modal .modal-header .modal-title {
+	margin-top: 1.5rem;
+	font-family: "EurostileLTStd", "Roboto", sans-serif;
+	font-weight: 300;
+	letter-spacing: .1rem;
+}
+
+.modal .close {
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
+	background-color: transparent;
+	border: none;
+	font-size: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
 }
 
 .wrapper {
