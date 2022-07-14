@@ -1,8 +1,24 @@
+let iFrame, loaderStep1, loaderStep2, loaderStep3, resetIframeLoader, playerWrapper = ''
+
+let isReloadingIframe = false;
+
+const iframes = {
+	mobile: 'https://connector.eagle3dstreaming.com/v6/eyJvd25lciI6IlJlZExlYWYiLCJhcHBOYW1lIjoiSFk1ME9mZmljZSIsIkNvbmZpZ05hbWUiOiJSZWRMZWFmU3RhbmRhcmRfTW9iaWxlIn0=',
+	desktop: 'https://connector.eagle3dstreaming.com/v6/eyJvd25lciI6IlJlZExlYWYiLCJhcHBOYW1lIjoiSFk1ME9mZmljZSIsIkNvbmZpZ05hbWUiOiJSZWRMZWFmU3RhbmRhcmQifQ=='
+}
+
 window.addEventListener('load', function () {
+	// Set element vars
+	playerWrapper = document.getElementsByTagName('body')[0]
+	loaderStep1 = document.getElementById("loaderStep1");
+	loaderStep2 = document.getElementById("loaderStep2");
+	loaderStep3 = document.getElementById("loaderStep3");
+	resetIframeLoader = document.getElementById("resetIframeLoader")
+	iFrame = document.getElementById("iframe_1");
+
 	const playButton = document.getElementById('play-button')
 
 	playButton.addEventListener('click', function () {
-		const loaderStep2 = document.getElementById("loaderStep2");
 		$(loaderStep2).fadeOut(1000)
 		hideInstructions()
 	})
@@ -14,20 +30,11 @@ window.addEventListener('load', function () {
 		showInstructions(true);
 	})
 
-	// const inquireButton = document.getElementById('inquire-button')
-	//
-	// inquireButton.addEventListener('click', function (e) {
-	// 	e.preventDefault();
-	//
-	// })
+	checkScreenSize('load');
 })
 
 const messageHandler = (event) => {
 	if(!event.data.type) return;
-	const loaderStep1 = document.getElementById("loaderStep1");
-	const loaderStep2 = document.getElementById("loaderStep2");
-	const loaderStep3 = document.getElementById("loaderStep3");
-	const iframeElem = document.getElementById("iframe_1");
 
 	console.log('event', event)
 	console.log("received data event type " + event.data.type)
@@ -37,49 +44,58 @@ const messageHandler = (event) => {
 			myHandleResponseFunction(event.data.descriptor);
 			break;
 		case "stage1_inqueued":
+			// If switching iframe src, don't show loaders again
+			if ( isReloadingIframe ) return
 			loaderStep1.style.visibility = "visible";
 			break;
 		case "stage2_deQueued":
 			// loading screen 1 hides
 			break;
 		case "stage3_slotOccupied":
-			console.log('hello??')
 			// loaderStep1.style.display = "none";
 			// loaderStep2.style.visibility = "visible";
 			break;
 		case "stage4_playBtnShowedUp":
 			//loading screen 2 hides
 			loaderStep2.style.visibility = "hidden";
-			iframeElem.style.visibility = "visible";
+			iFrame.style.visibility = "visible";
+
+			// If switching iframe src, don't show loaders again
+			if ( isReloadingIframe ) return
+
 			loaderStep3.style.visibility = "visible";
 			// let playButton = document.getElementById("playButtonParent");
 			// playButton.click();
 			// onPlayBtnPressed();
 			break;
 		case "stage5_playBtnPressed":
+			// hide reset loader if visible
+			if ( $(resetIframeLoader).is(':visible') ) {
+				$(resetIframeLoader).fadeOut()
+			}
+			$(iFrame).focus();
+
+			// If switching iframe src, don't show loaders again
+			if ( isReloadingIframe ) return
+
 			// Hide first loader
 			$(loaderStep1).fadeOut(1000)
 			// Show the header
-			const playerWrapper = document.getElementsByTagName('body')[0]
+
 			playerWrapper.classList.add('playing')
 
 			showInstructions();
 			// Show the play button
 			setTimeout( function () {
-				$(loaderStep2).addClass('loaded')
+				loaderStep2.classList.add('loaded')
 			}, 800)
 
 			// Show the virtual tour
-			iframeElem.style.visibility = "visible";
-			$('#iframe_1').focus();
+			iFrame.style.visibility = "visible";
 
-			// Hide the virtual tour settings button
-			// const bottomPanel = $('#e3ds_bottom_panelObj')
-			// console.log(bottomPanel)
-			// $(bottomPanel).hide();
 			break;
 		case "_focus":
-			document.getElementById("iframe_1").focus();
+			$(iFrame).focus();
 			hideInstructions()
 			break;
 		case "isIframe":
@@ -114,16 +130,12 @@ window.addEventListener('message', messageHandler);
 
 window.addEventListener('message', (message) => {
 	if (message.data.type === '_focus') {
-		document.getElementById("iframe_1").focus();
+		$(iFrame).focus();
 	}
 })
 
-window.addEventListener("load", function() {
-	checkRatio();
-})
-
 window.addEventListener("resize", function() {
-	checkRatio()
+	checkScreenSize('resize')
 })
 
 const showInstructions = showClose => {
@@ -142,35 +154,43 @@ const hideInstructions = () => {
 	helpButton.style.display = 'flex'
 }
 
-function checkRatio() {
-	const windowRatio = $(window).width() / $(window).height()
+const checkScreenSize = referrer => {
+	const windowWidth = $(window).width()
+	const windowRatio = windowWidth / $(window).height()
 	const videoRatio = 16/9
-	if ( windowRatio < videoRatio ) {
-		if ( !$('body').hasClass('portrait') ) {
-			console.log('portrait?')
-			$('body').addClass('portrait')
+	if ( windowWidth > 1024 ) {
+		if ( iFrame.src !== iframes.desktop ) {
+			switchIframe('desktop', referrer)
 		}
-	} else {
-		if ( $('body').hasClass('portrait') ) {
+		if ( windowRatio <= videoRatio ) {
+			$('body').addClass('portrait')
+		} else {
 			$('body').removeClass('portrait')
 		}
+	} else {
+		if ( iFrame.src !== iframes.mobile ) {
+			switchIframe('mobile', referrer)
+		}
 	}
-	console.log(windowRatio, videoRatio)
 }
 
-function onPlayBtnPressed() {
-	let loaderStep2 = document.getElementById("loaderStep2")
+const switchIframe = (layout, referrer) => {
+	if ( referrer === 'resize' ) {
+		isReloadingIframe = true
+		resetIframeLoader.style.display = "flex";
+	}
+	iFrame.src = iframes[layout]
+}
+
+const onPlayBtnPressed = () => {
 	loaderStep2.style.visibility = "hidden";
-	let loaderStep3 = document.getElementById("loaderStep3")
 	loaderStep3.style.visibility = "hidden";
-	let eleBanner = document.getElementById("iframe_1")
-	eleBanner.style.visibility = "visible";
+	iFrame.style.visibility = "visible";
 }
 
 function sendToMainPage(obj) {
 	let origin = "*"
-	let myIframe = document.getElementById("iframe_1");
-	myIframe.contentWindow.postMessage(JSON.stringify(obj), origin);
+	iFrame.contentWindow.postMessage(JSON.stringify(obj), origin);
 }
 
 function switchTo(val) {

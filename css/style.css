@@ -8,6 +8,7 @@
 
 * {
 	box-sizing: border-box;
+	font-family: "EurostileLTStd", "Roboto", sans-serif;
 }
 
 body, html {
@@ -15,6 +16,7 @@ body, html {
 	padding: 0;
 	height: 100%;
 	overflow: hidden;
+	font-size: 16px;
 }
 
 body {
@@ -96,7 +98,6 @@ body {
 body.playing #header {
 	transform: translateY(0);
 	opacity: 1;
-	z-index: 5;
 }
 
 #header #header-logo {
@@ -110,6 +111,26 @@ body.playing #header {
 	top: 50%;
 	transform: translate(-50%, -50%);
 	letter-spacing: .05rem;
+}
+
+@media screen and (max-width: 767px) {
+	#header {
+		flex-wrap: wrap;
+		padding: .75rem 1rem;
+	}
+	#header #header-logo {
+		max-width: 160px;
+	}
+	#header #header-label {
+		position: relative;
+		left: auto;
+		top: auto;
+		order: 3;
+		width: 100%;
+		transform: none;
+		text-align: center;
+		padding: 1rem .5rem 0;
+	}
 }
 
 #header #header-logo svg {
@@ -142,6 +163,12 @@ body.playing #header {
 	text-align: center;
 }
 
+@media screen and (max-width: 767px) {
+	.modal {
+		padding-top: 8rem;
+	}
+}
+
 .modal .modal-header, .modal .modal-footer {
 	position: relative;
 	border: none;
@@ -151,7 +178,8 @@ body.playing #header {
 	margin-top: 1.5rem;
 	font-family: "EurostileLTStd", "Roboto", sans-serif;
 	font-weight: 300;
-	letter-spacing: .1rem;
+	letter-spacing: .15rem;
+	color: #A3968D;
 }
 
 .modal .close {
@@ -161,15 +189,80 @@ body.playing #header {
 	background-color: transparent;
 	border: none;
 	font-size: 2rem;
+	color: #666666;
+}
+
+.modal .modal-header hr {
+	border-top: 1px solid #A3968D;
+	width: 22px;
+	margin: 1rem auto 0;
+}
+
+.modal .modal-body {
+	text-align: center;
+}
+
+.modal .modal-body .modal-body-inner {
+	margin: 0 auto;
+	display: inline-block;
+	text-align: left;
+}
+
+.modal .modal-body .modal-contact {
+	display: flex;
+	margin: 0 -.5rem 2rem;
+}
+
+.modal .modal-body .modal-contact h3, .modal .modal-body .modal-contact h4, .modal .modal-body .modal-contact p {
+	margin: 0;
+}
+
+.modal .modal-body .modal-contact h3 {
+	color: #573F33;
+	letter-spacing: .1rem;
+	font-weight: 300;
+}
+
+.modal .modal-body .modal-contact h4 {
+	font-weight: 400;
+	color: #666666;
+}
+
+.modal .modal-body .modal-contact p {
+	font-weight: 400;
+	color: #666666;
+}
+
+.modal .modal-body .modal-contact a {
+	color: #573F33;
+	text-decoration: underline;
+}
+
+.modal .modal-body .modal-contact .modal-contact-name, .modal .modal-body .modal-contact .modal-contact-info {
+	padding: 0 .5rem;
+}
+
+.modal .modal-body .modal-contact .modal-contact-name {
+	width: 60%;
+}
+
+@media screen and (max-width: 767px) {
+	.modal .modal-body .modal-contact .modal-contact-name {
+		width: 100%;
+	}
+	.modal .modal-body .modal-contact {
+		flex-direction: column;
+		text-align: center;
+	}
 }
 
 @media screen and (min-width: 768px) {
-  .modal:before {
-    display: inline-block;
-    vertical-align: middle;
-    content: " ";
-    height: 100%;
-  }
+	.modal:before {
+	  display: inline-block;
+	  vertical-align: middle;
+	  content: " ";
+	  height: 100%;
+	}
 }
 
 .modal-dialog {
@@ -258,6 +351,15 @@ body.playing #header {
 	width: auto;
 	padding-bottom: 0;
 	padding-right: 177%;
+}
+
+@media (max-width: 1024px) {
+	#player, .portrait #player {
+		width: 100%;
+		height: 0;
+		padding-bottom: 165%;
+		padding-right: 0;
+	}
 }
 
 #player-content {
@@ -556,20 +658,13 @@ a:hover {
 #loaderStep1 {
 	z-index: 3;
 }
-#loaderStep1 .loader-container {
+#loaderStep1 .loader-container, #resetIframeLoader .loader-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
-#loaderStep1 .loader-container span {
-	font-family: "EurostileLTStd-BoldEx2", "Roboto", sans-serif;
-	text-transform: uppercase;
-	font-weight: 400;
-	font-size: .7rem;
-	letter-spacing: .35rem;
-}
 #loaderStep1.pano-loaded .ggskin_image {
 	left: auto!important;
 	top: 30px!important;
@@ -577,21 +672,42 @@ a:hover {
 	transform: none!important;
 	height: 97px!important;
 }
+
 #loaderStep1.pano-loaded .ggskin_image .ggskin_image {
 	top: 0!important;
 	height: auto!important;
 }
+
 #loaderStep1.pano-loaded .loader-wrapper {
 	position: absolute;
 	bottom: 3rem;
 	left: 4rem;
 }
-#loaderStep1 .loader-container span:last-child {
+
+@media screen and (max-width: 767px) {
+	#loaderStep1.pano-loaded .ggskin_image {
+	}
+	#loaderStep1.pano-loaded .loader-wrapper {
+    	bottom: 2rem;
+    	left: 2rem;
+    }
+}
+
+#loaderStep1 .loader-container span, #resetIframeLoader .loader-container span {
+	font-family: "EurostileLTStd-BoldEx2", "Roboto", sans-serif;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: .7rem;
+	letter-spacing: .35rem;
+}
+
+#loaderStep1 .loader-container span:last-child, #resetIframeLoader .loader-container span:last-child {
 	font-size: .55rem;
 	letter-spacing: .3rem;
 	margin-top: .25rem;
 }
-#loaderStep1 .loader-container .lds-ring {
+
+#loaderStep1 .loader-container .lds-ring, #resetIframeLoader .loader-container .lds-ring {
   display: block;
   position: relative;
   width: 60px;
@@ -599,7 +715,8 @@ a:hover {
   margin-bottom: .5rem;
   margin-left: -6px;
 }
-#loaderStep1 .loader-container .lds-ring div {
+
+.loader-container .lds-ring div {
   box-sizing: border-box;
   display: block;
   position: absolute;
@@ -611,13 +728,13 @@ a:hover {
   animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   border-color: #fff transparent transparent transparent;
 }
-#loaderStep1 .loader-container .lds-ring div:nth-child(1) {
+.loader-container .lds-ring div:nth-child(1) {
   animation-delay: -0.45s;
 }
-#loaderStep1 .loader-container .lds-ring div:nth-child(2) {
+.loader-container .lds-ring div:nth-child(2) {
   animation-delay: -0.3s;
 }
-#loaderStep1 .loader-container .lds-ring div:nth-child(3) {
+.loader-container .lds-ring div:nth-child(3) {
   animation-delay: -0.15s;
 }
 
@@ -629,7 +746,9 @@ a:hover {
 	left: 0;
 	background-color: transparent;
 	z-index: 2;
+	overflow: hidden;
 }
+
 #instructions-container {
 	background-color: rgba(0,0,0,.4);
 	background-blend-mode: multiply;
@@ -646,7 +765,6 @@ a:hover {
 	transform: translateY(-3rem);
 	pointer-events: none;
 }
-
 
 #instructions-container .instruction {
 	flex: 1;
@@ -701,12 +819,32 @@ a:hover {
 	height: auto;
 }
 
+@media screen and (max-width: 767px) {
+	#instructions-container {
+		left: 0;
+		width: 100%;
+		height: auto;
+		flex-direction: row;
+		padding: 7rem 1rem .5rem;
+	}
+	#instructions-container .instruction p {
+		margin-top: .25rem;
+		font-size: .7rem;
+	}
+	#instructions-container .instruction span {
+		font-size: .7rem;
+	}
+	#instructions-container .instruction .instruction-icons .instruction-icon {
+		max-width: 50px;
+	}
+}
+
 #loaderStep2 .loader-bg {
 	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
+	width: 104vw;
+	height: 104vh;
+	top: -2vh;
+	left: -2vh;
 	backdrop-filter: blur(6px);
 }
 
@@ -758,6 +896,17 @@ a:hover {
 	animation: none;
 }
 
+@media screen and (max-width: 767px) {
+	#loaderStep2 .loader-container #play-button-wrapper #play-button {
+		width: 120px;
+		height: 120px;
+	}
+	#loaderStep2 .loader-container #play-button-wrapper p {
+		font-size: .8rem;
+	}
+
+}
+
 @keyframes pulse {
 	0% {
 		transform: scale(0.95);
@@ -778,6 +927,11 @@ a:hover {
 #loaderStep2 .loader-container #play-button svg {
 	width: 100%;
 	height: 100%;
+}
+
+#resetIframeLoader {
+	display: none;
+	z-index: 2;
 }
 
 @keyframes lds-ring {

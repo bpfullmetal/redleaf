@@ -13,8 +13,8 @@
         <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
 
         <script type="text/javascript" src="./images/jquery.min.js"></script>
-        <link type="text/css" rel="stylesheet" href="./css/style.css">
         <link type="text/css" rel="stylesheet" href="./css/bootstrap.min.css">
+        <link type="text/css" rel="stylesheet" href="./css/style.css">
         <script type="text/javascript" src="./js/message.js"></script>
         <script type="text/javascript" src="./js/demo.js"></script>
         <script type="text/javascript" src="./js/bootstrap.min.js"></script>
@@ -22,7 +22,7 @@
         <script type="text/javascript" src="js/eventHandler.js"></script>
     </head>
     <!-- NOTE: remove playing class for live -->
-    <body class="playing">
+    <body>
         <div id="header">
             <div id="header-logo">
                 <svg width="307" height="35" viewBox="0 0 307 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,7 +51,7 @@
         		<script type="text/javascript" src="skin.js"></script>
         		<script src="webxr/three.min.js"></script>
         		<script src="webxr/webxr-polyfill.min.js"></script>
-                <div id="container" style="width:100%;height:100%;overflow:hidden;">
+                <div id="container" style="width:100%;height:100%;overflow:hidden;position: relative;">
             		<br>Loading...<br><br>
         		</div>
         		<script type="text/javascript">
@@ -82,8 +82,16 @@
         					document.documentElement.style.setProperty('height', '100vh');
         					if (oh!=container.offsetHeight) {
         						container.style.setProperty('height',"100%");
+                                container.style.setProperty('top', 0);
         					} else {
         						container.style.setProperty('height',window.innerHeight+"px");
+                                let topOffset = $(container).offset().top * -1
+                                if ( topOffset > 0 ) {
+                                    container.style.setProperty('top', topOffset + 'px');
+                                }
+                                if ( topOffset < 0 ) {
+                                    container.style.setProperty('top', 0);
+                                }
         					}
         					window.scrollTo(0, 0);
         					pano.setViewerSize(container.offsetWidth, container.offsetHeight);
@@ -128,6 +136,17 @@
             </div>
         </div>
 
+        <div id="resetIframeLoader" class="loader">
+            <div class="loader-bg"></div>
+            <div class="loader-wrapper">
+                <div class="loader-container">
+                    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+                    <span class="loading-virtual-tour">Virtual Tour</span>
+                    <span class="loading-text">Loading</span>
+                </div>
+            </div>
+        </div>
+
         <div id="instructions-container">
             <div class="instruction instruction-move">
                 <div class="instruction-icons">
@@ -165,10 +184,10 @@
                 <div id="content">
                     <div id="player">
                         <div id="player-content">
-                            <!-- <iframe allow="camera;microphone" style="visibility: hidden;" id="iframe_1"
-                                    src="https://connector.eagle3dstreaming.com/v6/eyJvd25lciI6IlJlZExlYWYiLCJhcHBOYW1lIjoiSFk1ME9mZmljZSIsIkNvbmZpZ05hbWUiOiJSZWRMZWFmU3RhbmRhcmQifQ=="
+                            <iframe allow="camera;microphone" style="visibility: hidden;" id="iframe_1"
+                                    src=""
                                     width="100%" height="100%" allowfullscreen>
-                            </iframe> -->
+                            </iframe>
                         </div>
                     </div>
                     <!---Start footer-->
@@ -185,13 +204,48 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h3 class="modal-title text-center uppercase" id="inquire-modal-label">Contact Us</h3>
+                        <h2 class="modal-title text-center uppercase" id="inquire-modal-label">Contact Us</h2>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
+                        <hr>
                     </div>
                     <div class="modal-body">
-
+                        <div class="modal-body-inner">
+                            <div class="modal-contact">
+                                <div class="modal-contact-name">
+                                    <h3>STEPHEN C. WINTER</h3>
+                                    <h4>Senior Vice President Related Companies</h4>
+                                </div>
+                                <div class="modal-contact-info">
+                                    <p>Direct: <a href="tel:6465822273">(646) 582-2273</a></p>
+                                    <p>Mobile: <a href="tel:3474089002">(347) 408-9002</p>
+                                    <p><a href="mailto:stephen.winter@related.com">stephen.winter@related.com</a></p>
+                                </div>
+                            </div>
+                            <div class="modal-contact">
+                                <div class="modal-contact-name">
+                                    <h3>HENRY ALLMAN</h3>
+                                    <h4>Senior Associate, Commercial Leasing Related Companies</h4>
+                                </div>
+                                <div class="modal-contact-info">
+                                    <p>Direct: <a href="tel:2124017666">(212) 401-7666</a></p>
+                                    <p>Mobile: <a href="tel:9178469273">(917) 846-9273</a></p>
+                                    <p><a href="mailto:hallman@related.com">hallman@related.com</a></p>
+                                </div>
+                            </div>
+                            <div class="modal-contact">
+                                <div class="modal-contact-name">
+                                    <h3>ELLIOT KARP</h3>
+                                    <h4>Senior Associate, Commercial Leasing Related Companies</h4>
+                                </div>
+                                <div class="modal-contact-info">
+                                    <p>Direct: <a href="tel:2125000822">(212) 500-0822</a></p>
+                                    <p>Mobile: <a href="tel:9085778537">(908) 577-8537</a></p>
+                                    <p><a href="mailto:ekarp@related.com">ekarp@related.com</a></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <!-- <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
