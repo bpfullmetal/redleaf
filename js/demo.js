@@ -3,8 +3,8 @@ let iFrame, loaderStep1, loaderStep2, loaderStep3, resetIframeLoader, playerWrap
 let isReloadingIframe = false;
 
 const iframes = {
-	mobile: 'https://connector.eagle3dstreaming.com/v6/eyJvd25lciI6IlJlZExlYWYiLCJhcHBOYW1lIjoiSFk1ME9mZmljZSIsIkNvbmZpZ05hbWUiOiJSZWRMZWFmU3RhbmRhcmRfTW9iaWxlIn0=',
-	desktop: 'https://connector.eagle3dstreaming.com/v6/eyJvd25lciI6IlJlZExlYWYiLCJhcHBOYW1lIjoiSFk1ME9mZmljZSIsIkNvbmZpZ05hbWUiOiJSZWRMZWFmU3RhbmRhcmQifQ=='
+	mobile: 'https://connector.eagle3dstreaming.com/v5/RedLeaf/HY50Office_NE/RedLeafStandard_Mobile',
+	desktop: 'https://connector.eagle3dstreaming.com/v5/RedLeaf/HY50Office_NE/RedLeafStandard'
 }
 
 window.addEventListener('load', function () {

@@ -7,11 +7,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="HandheldFriendly" content="true">
         <title>E3DS Iframe Demo</title>
-        <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-        <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
-
+        <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+        <link rel="manifest" href="./site.webmanifest">
+        <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#000000">
+        <meta name="msapplication-TileColor" content="#000000">
+        <meta name="theme-color" content="#ffffff">
         <script type="text/javascript" src="./images/jquery.min.js"></script>
         <link type="text/css" rel="stylesheet" href="./css/bootstrap.min.css">
         <link type="text/css" rel="stylesheet" href="./css/style.css">
@@ -30,7 +32,7 @@
                 </svg>
             </div>
             <div id="header-label">
-                <span>64th Floor Pre-Build Interactive Tour</span>
+                <span>64th Floor Pre-Built Virtual Tour</span>
             </div>
             <div id="header-inquire">
                 <button id="inquire-button" data-toggle="modal" data-target="#inquire-modal" class="btn">Inquire</button>
@@ -42,8 +44,8 @@
             <div class="loader-header">
                 <div class="loader-container">
                     <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
-                    <span class="loading-virtual-tour">Virtual Tour</span>
-                    <span class="loading-text">Loading</span>
+                    <span class="loading-virtual-tour">Virtual Tour Loading</span>
+                    <span class="loading-text">Enjoy This 360 Preview While You Wait!</span>
                 </div>
                 <!-- <div class="icon__hourglass"></div> -->
                 <!-- - - - - - - 8<- - - - - - cut here - - - - - 8<- - - - - - - -->
@@ -151,29 +153,29 @@
             <div class="instruction instruction-move">
                 <div class="instruction-icons">
                     <div class="instruction-icon">
-                        <img src="images/mouse-click.png"/>
+                        <img src="images/Icon_Nav_Mouse-2xClick.png"/>
                     </div>
                     <div class="instruction-icon">
-                        <img src="images/touch-click.png"/>
+                        <img src="images/Icon_Nav_Hand-2xClick.png"/>
                     </div>
                 </div>
                 <div class="instruction-text text-center">
                     <p class="uppercase fw-bold text-white">Move Camera</p>
-                    <span class="text-white">Double tap floor</span>
+                    <span class="text-white"><p>Double tap floor</p></span>
                 </div>
             </div>
             <div class="instruction instruction-rotate">
                 <div class="instruction-icons">
                     <div class="instruction-icon">
-                        <img src="images/mouse-click.png"/>
+                        <img src="images/Icon_Nav_Mouse-Swipe.png"/>
                     </div>
                     <div class="instruction-icon">
-                        <img src="images/touch-click.png"/>
+                        <img src="images/Icon_Nav_Hand-Swipe.png"/>
                     </div>
                 </div>
                 <div class="instruction-text text-center">
                     <p class="uppercase fw-bold text-white">Rotation</p>
-                    <span class="text-white">Swipe on screen to control your view</span>
+                    <span class="text-white"><p>Swipe on screen to control your view</p></span>
                 </div>
             </div>
         </div>
