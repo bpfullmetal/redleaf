@@ -1,0 +1,71 @@
+<!-- Copyright Epic Games, Inc. All Rights Reserved. -->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <title>E3DS Iframe in Iframe Demo</title>
+    <script type="text/javascript" src="https://ue5demo-01.redleafny.com/images/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ue5demo-01.redleafny.com/js/demo-iframe-external.js"></script>
+    <!-- <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+
+    <script type="text/javascript" src="./images/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="./css/style.css">
+    <script type="text/javascript" src="./js/message.js"></script>
+    <script type="text/javascript" src="./js/demo.js"></script> -->
+
+
+    <style type="text/css">
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #content {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0px;
+        }
+    </style>
+    <!-- YOUR CODE GOES HERE -->
+    <!-- <script type="text/javascript" src="js/eventHandler.js"></script> -->
+    <style type="text/css" title="Default">
+        /* fullscreen */
+        html {
+            height:100%;
+        }
+        body {
+            height:100%;
+            margin: 0px;
+            overflow:hidden; /* disable scrollbars */
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* remove highlight on tab for iOS/Android */
+        }
+        /* fix for scroll bars on webkit & >=Mac OS X Lion */
+        ::-webkit-scrollbar {
+            background-color: rgba(0,0,0,0.5);
+            width: 0.75em;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color:  rgba(255,255,255,0.5);
+        }
+    </style>
+</head>
+<body>
+  <div id="content">
+      <iframe id="test-frame" allow="camera;microphone" src="https://ue5demo-01.redleafny.com/iframe.html" width="100%" height="100%" allowfullscreen>
+      </iframe>
+
+  </div>
+</body>
+
+</html>
