@@ -47,6 +47,8 @@ const messageHandler = (event) => {
 			// If switching iframe src, don't show loaders again
 			if ( isReloadingIframe ) return
 			loaderStep1.style.visibility = "visible";
+			// Show the header
+			playerWrapper.classList.add('playing');
 			break;
 		case "stage2_deQueued":
 			// loading screen 1 hides
@@ -80,9 +82,9 @@ const messageHandler = (event) => {
 
 			// Hide first loader
 			$(loaderStep1).fadeOut(1000)
-			// Show the header
 
-			playerWrapper.classList.add('playing')
+			// Show the header
+			// playerWrapper.classList.add('playing')
 
 			showInstructions();
 			// Show the play button
