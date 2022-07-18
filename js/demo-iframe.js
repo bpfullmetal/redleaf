@@ -3,14 +3,15 @@ let iFrame, loaderStep1, loaderStep2, loaderStep3, resetIframeLoader, playerWrap
 let isReloadingIframe = false;
 
 const iframes = {
-	mobile: 'https://connector.eagle3dstreaming.com/v5/RedLeaf/HY50Office_NE/RedLeafStandard_Mobile',
-	desktop: 'https://connector.eagle3dstreaming.com/v5/RedLeaf/HY50Office_NE/RedLeafStandard'
+	mobile: 'https://connector.eagle3dstreaming.com/v6/eyJvd25lciI6IlJlZExlYWYiLCJhcHBOYW1lIjoiSFk1ME9mZmljZSIsIkNvbmZpZ05hbWUiOiJSZWRMZWFmU3RhbmRhcmRfTW9iaWxlIn0=',
+	desktop: 'https://connector.eagle3dstreaming.com/v6/eyJvd25lciI6IlJlZExlYWYiLCJhcHBOYW1lIjoiSFk1ME9mZmljZSIsIkNvbmZpZ05hbWUiOiJSZWRMZWFmU3RhbmRhcmQifQ=='
 }
 
 window.addEventListener('load', function () {
 	// Set element vars
 	playerWrapper = document.getElementsByTagName('body')[0]
 	loaderStep1 = document.getElementById("loaderStep1");
+	console.log(loaderStep1);
 	loaderStep2 = document.getElementById("loaderStep2");
 	loaderStep3 = document.getElementById("loaderStep3");
 	resetIframeLoader = document.getElementById("resetIframeLoader")
@@ -47,8 +48,6 @@ const messageHandler = (event) => {
 			// If switching iframe src, don't show loaders again
 			if ( isReloadingIframe ) return
 			loaderStep1.style.visibility = "visible";
-			// Show the header
-			playerWrapper.classList.add('playing');
 			break;
 		case "stage2_deQueued":
 			// loading screen 1 hides
@@ -82,9 +81,9 @@ const messageHandler = (event) => {
 
 			// Hide first loader
 			$(loaderStep1).fadeOut(1000)
-
 			// Show the header
-			// playerWrapper.classList.add('playing')
+
+			playerWrapper.classList.add('playing')
 
 			showInstructions();
 			// Show the play button

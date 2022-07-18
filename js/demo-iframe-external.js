@@ -3,27 +3,28 @@ let iFrame, loaderStep1, loaderStep2, loaderStep3, resetIframeLoader, playerWrap
 let isReloadingIframe = false;
 
 const iframes = {
-	mobile: 'https://connector.eagle3dstreaming.com/v5/RedLeaf/HY50Office_NE/RedLeafStandard_Mobile',
-	desktop: 'https://connector.eagle3dstreaming.com/v5/RedLeaf/HY50Office_NE/RedLeafStandard'
+	mobile: 'https://connector.eagle3dstreaming.com/v6/eyJvd25lciI6IlJlZExlYWYiLCJhcHBOYW1lIjoiSFk1ME9mZmljZSIsIkNvbmZpZ05hbWUiOiJSZWRMZWFmU3RhbmRhcmRfTW9iaWxlIn0=',
+	desktop: 'https://connector.eagle3dstreaming.com/v6/eyJvd25lciI6IlJlZExlYWYiLCJhcHBOYW1lIjoiSFk1ME9mZmljZSIsIkNvbmZpZ05hbWUiOiJSZWRMZWFmU3RhbmRhcmQifQ=='
 }
 
 window.addEventListener('load', function () {
 	// Set element vars
-	playerWrapper = document.getElementsByTagName('body')[0]
-	loaderStep1 = document.getElementById("loaderStep1");
-	loaderStep2 = document.getElementById("loaderStep2");
-	loaderStep3 = document.getElementById("loaderStep3");
-	resetIframeLoader = document.getElementById("resetIframeLoader")
-	iFrame = document.getElementById("iframe_1");
+	playerWrapper = document.getElementById('test-frame').contentWindow.document.getElementsByTagName('body')[0]
+	loaderStep1 = document.getElementById('test-frame').contentWindow.document.getElementById("loaderStep1");
+	console.log(loaderStep1);
+	loaderStep2 = document.getElementById('test-frame').contentWindow.document.getElementById("loaderStep2");
+	loaderStep3 = document.getElementById('test-frame').contentWindow.document.getElementById("loaderStep3");
+	resetIframeLoader = document.getElementById('test-frame').contentWindow.document.getElementById("resetIframeLoader")
+	iFrame = document.getElementById('test-frame').contentWindow.document.getElementById("iframe_1");
 
-	const playButton = document.getElementById('play-button')
+	const playButton = document.getElementById('test-frame').contentWindow.document.getElementById('play-button')
 
 	playButton.addEventListener('click', function () {
 		$(loaderStep2).fadeOut(1000)
 		hideInstructions()
 	})
 
-	const helpButton = document.getElementById('help-button')
+	const helpButton = document.getElementById('test-frame').contentWindow.document.getElementById('help-button')
 
 	helpButton.addEventListener('click', function (e) {
 		e.preventDefault();
@@ -47,8 +48,6 @@ const messageHandler = (event) => {
 			// If switching iframe src, don't show loaders again
 			if ( isReloadingIframe ) return
 			loaderStep1.style.visibility = "visible";
-			// Show the header
-			playerWrapper.classList.add('playing');
 			break;
 		case "stage2_deQueued":
 			// loading screen 1 hides
@@ -66,7 +65,7 @@ const messageHandler = (event) => {
 			if ( isReloadingIframe ) return
 
 			loaderStep3.style.visibility = "visible";
-			// let playButton = document.getElementById("playButtonParent");
+			// let playButton = document.getElementById('test-frame').contentWindow.document.getElementById("playButtonParent");
 			// playButton.click();
 			// onPlayBtnPressed();
 			break;
@@ -82,9 +81,9 @@ const messageHandler = (event) => {
 
 			// Hide first loader
 			$(loaderStep1).fadeOut(1000)
-
 			// Show the header
-			// playerWrapper.classList.add('playing')
+
+			playerWrapper.classList.add('playing')
 
 			showInstructions();
 			// Show the play button
@@ -141,18 +140,18 @@ window.addEventListener("resize", function() {
 })
 
 const showInstructions = showClose => {
-	const instructions = document.getElementById('instructions-container')
+	const instructions = document.getElementById('test-frame').contentWindow.document.getElementById('instructions-container')
 	instructions.classList.add('visible')
 
-	const helpButton = document.getElementById('help-button')
+	const helpButton = document.getElementById('test-frame').contentWindow.document.getElementById('help-button')
 	helpButton.style.display = 'none'
 }
 
 const hideInstructions = () => {
-	const instructions = document.getElementById('instructions-container')
+	const instructions = document.getElementById('test-frame').contentWindow.document.getElementById('instructions-container')
 	instructions.classList.remove('visible')
 
-	const helpButton = document.getElementById('help-button')
+	const helpButton = document.getElementById('test-frame').contentWindow.document.getElementById('help-button')
 	helpButton.style.display = 'flex'
 }
 
