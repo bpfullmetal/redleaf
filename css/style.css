@@ -98,6 +98,7 @@ body {
 body.playing #header {
 	transform: translateY(0);
 	opacity: 1;
+	z-index: 99;
 }
 
 #header #header-logo {
@@ -1205,5 +1206,6 @@ screen and (max-height: 465px) {
 /** JESSE CUSTOMIZATIONS **/
 .loader-header {
 	width: 100% !important;
+	height: 100% !important;
 }
 /** JESSE CUSTOMIZATIONS END **/
