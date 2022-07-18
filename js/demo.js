@@ -10,6 +10,7 @@ const iframes = {
 window.addEventListener('load', function () {
 	// Set element vars
 	playerWrapper = document.getElementsByTagName('body')[0]
+	loaderStep0 = document.getElementById("loaderStep0");
 	loaderStep1 = document.getElementById("loaderStep1");
 	loaderStep2 = document.getElementById("loaderStep2");
 	loaderStep3 = document.getElementById("loaderStep3");
@@ -58,6 +59,7 @@ const messageHandler = (event) => {
 			// loaderStep2.style.visibility = "visible";
 			break;
 		case "stage4_playBtnShowedUp":
+			
 			//loading screen 2 hides
 			loaderStep2.style.visibility = "hidden";
 			iFrame.style.visibility = "visible";

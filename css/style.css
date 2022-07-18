@@ -663,9 +663,27 @@ a:hover {
 	transition: opacity .2s linear;
 }
 
-#loaderStep1 {
+#loaderStep0 {
 	z-index: 3;
 }
+
+#loaderStep0 .loader-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#loaderStep1 {
+	z-index: 3;
+	opacity: 0;
+	transition: all .3s linear;
+}
+
+#loaderStep1.pano-loaded {
+	opacity: 1;
+}
+
 #loaderStep1 .loader-container {
 	display: flex;
 	flex-direction: column;
@@ -717,7 +735,7 @@ a:hover {
 	text-align: center;
 }
 
-#loaderStep1 .loader-container span, #resetIframeLoader .loader-container span {
+#loaderStep1 .loader-container span, #loaderStep0 .loader-container span, #resetIframeLoader .loader-container span {
 	font-family: "EurostileLTStd-BoldEx2", "Roboto", sans-serif;
 	text-transform: uppercase;
 	font-weight: 400;
@@ -725,7 +743,7 @@ a:hover {
 	letter-spacing: .35rem;
 }
 
-#loaderStep1 .loader-container span:last-child, #resetIframeLoader .loader-container span:last-child {
+#loaderStep1 .loader-container span:last-child, #loaderStep0 .loader-container span:last-child, #resetIframeLoader .loader-container span:last-child {
 	font-size: .55rem;
 	letter-spacing: .3rem;
 	margin-top: .25rem;
@@ -737,7 +755,7 @@ a:hover {
 	}
 }
 
-#loaderStep1 .loader-container .lds-ring, #resetIframeLoader .loader-container .lds-ring {
+#loaderStep1 .loader-container .lds-ring, #loaderStep0 .loader-container .lds-ring, #resetIframeLoader .loader-container .lds-ring {
   display: block;
   position: relative;
   width: 60px;
