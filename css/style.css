@@ -76,6 +76,13 @@ body {
 	text-decoration: none;
 }
 
+@media screen and (max-width: 767px) {
+	#wrapperdiv #help-button {
+		bottom: auto;
+		top: calc(100vh - 10.5rem);
+	}
+}
+
 #header {
 	background-color: white;
 	padding: .75rem 2rem;
@@ -701,6 +708,15 @@ a:hover {
     }
 }
 
+#loaderStep1 div.ggskin_image .loader-container {
+	align-items: center;
+	margin: 0 auto;
+}
+
+#loaderStep1 div.ggskin_image .loader-container .loading-text {
+	text-align: center;
+}
+
 #loaderStep1 .loader-container span, #resetIframeLoader .loader-container span {
 	font-family: "EurostileLTStd-BoldEx2", "Roboto", sans-serif;
 	text-transform: uppercase;
@@ -713,6 +729,12 @@ a:hover {
 	font-size: .55rem;
 	letter-spacing: .3rem;
 	margin-top: .25rem;
+}
+
+@media screen and (max-width: 767px) {
+	#loaderStep1 .loader-container span:last-child {
+		max-width: 260px;
+	}
 }
 
 #loaderStep1 .loader-container .lds-ring, #resetIframeLoader .loader-container .lds-ring {
