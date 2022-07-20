@@ -3,8 +3,8 @@ let iFrame, loaderStep1, loaderStep2, loaderStep3, resetIframeLoader, playerWrap
 let isReloadingIframe = false;
 
 const iframes = {
-	mobile: 'https://connector.eagle3dstreaming.com/v5/RedLeaf/HY50Office_NE/RedLeafStandard_Mobile',
-	desktop: 'https://connector.eagle3dstreaming.com/v5/RedLeaf/HY50Office_NE/RedLeafStandard'
+	mobile: 'https://connector.eagle3dstreaming.com/v5/RedLeaf/360RosemaryLobby/RedLeafStandard_Mobile',
+	desktop: 'https://connector.eagle3dstreaming.com/v5/RedLeaf/360RosemaryLobby/RedLeafStandard'
 }
 
 window.addEventListener('load', function () {
@@ -82,8 +82,8 @@ const messageHandler = (event) => {
 			// Hide first loader
 			$(loaderStep1).fadeOut(1000)
 			// Show the header
-
-			playerWrapper.classList.add('playing')
+			console.log('playing?')
+			// playerWrapper.classList.add('playing')
 
 			showInstructions();
 			// Show the play button

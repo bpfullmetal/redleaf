@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Pano2VR project file  -->
+<pano2vrconfig version="6.1.15" rev="18116">
+  <tour>
+    <panorama>
+      <input>
+        <patch/>
+        <type>auto</type>
+        <filename>P:/560_RedLeaf_Unreal R+D/ProductDev/revised_360Rosemary-Lobby/Screencaps-2/360Rosemary_Panorama.jpg</filename>
+        <videotype>equi</videotype>
+        <levelpitch>0</levelpitch>
+        <levelroll>0</levelroll>
+      </input>
+      <viewingparameter>
+        <pan/>
+        <tilt/>
+        <fov/>
+        <flyinstart/>
+        <pannorth>0</pannorth>
+      </viewingparameter>
+      <userdata>
+        <capturedatetime>2022-07-19T15:46:07</capturedatetime>
+        <tags>Screencaps-2</tags>
+      </userdata>
+      <floorplans/>
+      <hotspots/>
+      <output/>
+      <streetview/>
+      <streetviewproject/>
+      <sounds/>
+      <id>node2</id>
+    </panorama>
+    <start>node2</start>
+  </tour>
+  <panorama>
+    <id>master</id>
+    <input>
+      <patch/>
+    </input>
+    <viewingparameter>
+      <pan/>
+      <tilt/>
+      <fov/>
+      <flyinstart/>
+    </viewingparameter>
+    <userdata/>
+    <floorplans/>
+    <hotspots/>
+    <output>
+      <placeidcache>{"entries":[]}</placeidcache>
+      <htmlcss>
+        <html>
+          <enabled>1</enabled>
+          <filename>index.html</filename>
+          <values>
+            <value id="css"/>
+            <value id="fitcover">false</value>
+            <value id="gginfo">false</value>
+            <value id="htmltitle">$(upt)</value>
+            <value id="jsxml">false</value>
+            <value id="parseanchor">false</value>
+          </values>
+        </html>
+        <facequality/>
+        <transition>
+          <zoomafterinfov>90</zoomafterinfov>
+          <zoomafteroutfov>20</zoomafteroutfov>
+        </transition>
+        <autorotate/>
+        <soundstransition/>
+        <flyintransition/>
+        <hotspottext/>
+        <hotspotstyle/>
+        <webvr/>
+        <tilesize>2330</tilesize>
+        <filename>pano.xml</filename>
+        <lockedwheel>1</lockedwheel>
+        <invertwheel>1</invertwheel>
+        <speedwheel>0.1</speedwheel>
+      </htmlcss>
+    </output>
+    <streetview/>
+    <streetviewproject/>
+    <sounds/>
+    <animation>
+      <title>Animation01</title>
+      <sequence/>
+    </animation>
+  </panorama>
+</pano2vrconfig>

@@ -49,7 +49,7 @@ const messageHandler = (event) => {
 			if ( isReloadingIframe ) return
 			loaderStep1.style.visibility = "visible";
 			// Show the header
-			playerWrapper.classList.add('playing');
+			// playerWrapper.classList.add('playing');
 			break;
 		case "stage2_deQueued":
 			// loading screen 1 hides

@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<panorama id="node1" apprev="18116" appversion="6.1.15">
-  <input leveltilesize="510" levelingpitch="0" levelbias="0.400" overlap="1" width="2330" levelingroll="0" levelbiashidpi="1.000" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" height="2330">
-    <level width="2330" preload="0" predecode="0" height="2330"/>
-    <level width="1165" preload="0" predecode="0" height="1165"/>
-    <level width="582" preload="0" predecode="0" height="582"/>
-    <level width="291" preload="1" predecode="1" height="291"/>
-    <preview color="0x808080" strip="1"/>
-  </input>
-  <view pannorth="0" fovmode="0">
-    <start tilt="0" fov="70" pan="0" projection="4"/>
-    <flyin tilt="-90" fov="170" pan="0" projection="9"/>
-    <min tilt="-90" fovpixel="2" pan="0"/>
-    <max tilt="90" fovstereographic="270" fov="120" scaletofit="1" pan="360" fovfisheye="360"/>
-  </view>
-  <userdata copyright="" author="" longitude="" title="" datetime="" source="" heading="0" tags="50HY Stitch Test 4" nodeid="node1" customnodeid="" latitude="" description="" comment="" info=""/>
-  <hotspots wordwrap="1" width="180" height="20">
-    <label enabled="1" textcolor="0x000000" borderradius="1" background="1" borderalpha="1" wordwrap="1" width="180" textalpha="1" backgroundalpha="1" backgroundcolor="0xffffff" border="1" bordercolor="0x000000" height="20"/>
-    <polystyle mode="0" handcursor="1" borderalpha="1" backgroundalpha="0.25098" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
-  </hotspots>
-  <media/>
-  <transition enabled="1" blendtime="1" zoomout="0" zoomafterinfov="90" zoomfov="20" blendcolor="0x000000" type="crossdissolve" zoomspeed="2" zoomin="0" zoomafteroutfov="20" softedge="0" zoomoutpause="1"/>
-  <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
-  <control lockedmouse="0" simulatemass="1" dblclickfullscreen="0" lockedwheel="1" invertcontrol="1" rubberband="0" lockedkeyboardzoom="0" hideabout="0" speedwheel="0.1" contextprojections="0" sensitivity="8" invertwheel="1" contextfullscreen="1" lockedkeyboard="0" contextvr="1"/>
-</panorama>
+<tour start="node2" appversion="6.1.15" apprev="18116">
+  <panorama id="node2">
+    <input levelingroll="0" levelingpitch="0" width="2447" levelbiashidpi="1.000" leveltileurl="tiles/node2/cf_%c/l_%l/c_%x/tile_%y.jpg" leveltilesize="510" height="2447" levelbias="0.400" overlap="1">
+      <level width="2447" preload="0" predecode="0" height="2447"/>
+      <level width="1223" preload="0" predecode="0" height="1223"/>
+      <level width="611" preload="0" predecode="0" height="611"/>
+      <level width="305" preload="1" predecode="1" height="305"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start tilt="0" pan="0" projection="4" fov="70"/>
+      <flyin tilt="-90" pan="0" projection="9" fov="170"/>
+      <min tilt="-90" pan="0" fovpixel="2"/>
+      <max tilt="90" pan="360" scaletofit="1" fovstereographic="270" fovfisheye="360" fov="120"/>
+    </view>
+    <userdata latitude="" title="" nodeid="node2" customnodeid="" info="" copyright="" tags="Screencaps-2" heading="0" description="" datetime="" source="" author="" comment="" longitude=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label textalpha="1" enabled="1" background="1" bordercolor="0x000000" width="180" wordwrap="1" border="1" textcolor="0x000000" borderalpha="1" borderradius="1" backgroundalpha="1" height="20" backgroundcolor="0xffffff"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" mode="0" backgroundalpha="0.25098" backgroundcolor="0x0000ff" handcursor="1"/>
+    </hotspots>
+    <media/>
+    <transition softedge="0" zoomoutpause="1" enabled="1" zoomfov="20" type="crossdissolve" blendcolor="0x000000" blendtime="1" zoomafterinfov="90" zoomin="0" zoomspeed="2" zoomout="0" zoomafteroutfov="20"/>
+    <animation useinautorotation="0" animsequence="Animation01" syncanimationwithvideo="0"/>
+    <control dblclickfullscreen="0" contextfullscreen="1" invertcontrol="1" lockedmouse="0" hideabout="0" sensitivity="8" contextvr="1" rubberband="0" lockedwheel="1" lockedkeyboardzoom="0" lockedkeyboard="0" invertwheel="1" contextprojections="0" simulatemass="1" speedwheel="0.1"/>
+  </panorama>
+  <masternode>
+    <userdata latitude="" title="" nodeid="master" customnodeid="" info="" copyright="" tags="" heading="0" description="" datetime="" source="" author="" comment="" longitude=""/>
+  </masternode>
+</tour>
