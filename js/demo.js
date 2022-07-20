@@ -3,8 +3,8 @@ let iFrame, loaderStep1, loaderStep2, loaderStep3, resetIframeLoader, playerWrap
 let isReloadingIframe = false;
 
 const iframes = {
-	mobile: 'https://connector.eagle3dstreaming.com/v5/RedLeaf/HY50Office_NE/RedLeafStandard_Mobile',
-	desktop: 'https://connector.eagle3dstreaming.com/v5/RedLeaf/HY50Office_NE/RedLeafStandard'
+	mobile: 'https://connector.eagle3dstreaming.com/v5/RedLeaf/360RosemaryLobby/RedLeafStandard_Mobile',
+	desktop: 'https://connector.eagle3dstreaming.com/v5/RedLeaf/360RosemaryLobby/RedLeafStandard'
 }
 
 window.addEventListener('load', function () {
@@ -59,7 +59,7 @@ const messageHandler = (event) => {
 			// loaderStep2.style.visibility = "visible";
 			break;
 		case "stage4_playBtnShowedUp":
-			
+
 			//loading screen 2 hides
 			loaderStep2.style.visibility = "hidden";
 			iFrame.style.visibility = "visible";
