@@ -10,8 +10,8 @@ const iframes = {
 window.addEventListener('load', function () {
 	// Set element vars
 	playerWrapper = document.getElementById('test-frame').contentWindow.document.getElementsByTagName('body')[0]
+	loaderStep0 = document.getElementById('test-frame').contentWindow.document.getElementById("loaderStep0");
 	loaderStep1 = document.getElementById('test-frame').contentWindow.document.getElementById("loaderStep1");
-	console.log(loaderStep1);
 	loaderStep2 = document.getElementById('test-frame').contentWindow.document.getElementById("loaderStep2");
 	loaderStep3 = document.getElementById('test-frame').contentWindow.document.getElementById("loaderStep3");
 	resetIframeLoader = document.getElementById('test-frame').contentWindow.document.getElementById("resetIframeLoader")
@@ -48,6 +48,8 @@ const messageHandler = (event) => {
 			// If switching iframe src, don't show loaders again
 			if ( isReloadingIframe ) return
 			loaderStep1.style.visibility = "visible";
+			// Show the header
+			// playerWrapper.classList.add('playing');
 			break;
 		case "stage2_deQueued":
 			// loading screen 1 hides
@@ -57,6 +59,7 @@ const messageHandler = (event) => {
 			// loaderStep2.style.visibility = "visible";
 			break;
 		case "stage4_playBtnShowedUp":
+
 			//loading screen 2 hides
 			loaderStep2.style.visibility = "hidden";
 			iFrame.style.visibility = "visible";
@@ -81,9 +84,9 @@ const messageHandler = (event) => {
 
 			// Hide first loader
 			$(loaderStep1).fadeOut(1000)
-			// Show the header
 
-			playerWrapper.classList.add('playing')
+			// Show the header
+			// playerWrapper.classList.add('playing')
 
 			showInstructions();
 			// Show the play button

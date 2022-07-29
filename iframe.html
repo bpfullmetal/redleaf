@@ -47,8 +47,7 @@
                 <!-- <div class="icon__hourglass"></div> -->
                 <!-- - - - - - - 8<- - - - - - cut here - - - - - 8<- - - - - - - -->
         		<script type="text/javascript" src="https://virtual-lobby.redleafny.com/pano2vr_player.js"></script>
-        		<script type="text/javascript" src="https://virtual-lobby.redleafny.com/skin.js"></script>
-        		<script src="https://virtual-lobby.redleafny.com/webxr/three.min.js"></script>
+            <script src="https://virtual-lobby.redleafny.com/webxr/three.min.js"></script>
         		<script src="https://virtual-lobby.redleafny.com/webxr/webxr-polyfill.min.js"></script>
                 <div id="container" style="width:100%;height:100%;overflow:hidden;position: relative;">
             		<br>Loading...<br><br>
@@ -57,15 +56,14 @@
 
         			// create the panorama player with the container
         			pano=new pano2vrPlayer("container");
-        			// add the skin object
-        			skin=new pano2vrSkin(pano);
         			// load the configuration
                     pano.on("imagesready", function() {
                         $('.ggskin_image').fadeOut(200)
                         setTimeout( function () {
                             $('#loaderStep1').addClass('pano-loaded')
-                            $('#loaderStep1 .loader-wrapper').append($('#loaderStep1 .loader-container')).fadeIn(200)
-                            $('.ggskin_image').fadeIn(200)
+                            $('#loaderStep1 .loader-wrapper').append($('#loaderStep0 .loader-container')).fadeIn(200)
+                            $('#loaderStep0').hide()
+                            // $('.ggskin_image').fadeIn(200)
                         }, 200)
                     });
         			window.addEventListener("load", function() {
